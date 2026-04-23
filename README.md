@@ -8,52 +8,65 @@ A simple C++ command-line tool for wireless network analysis using monitor mode 
 * Enable monitor mode
 * Disable monitor mode (restore normal Wi-Fi)
 * Scan nearby networks using airodump-ng
-* Basic menu-driven CLI
+* Menu-driven CLI interface
 
 ## Requirements
 
-Install the following packages before running the tool:
+### Software
 
-## Hardware Requirements
+Install the following packages:
 
-* A wireless network adapter that supports **monitor mode**
-* Some laptop internal adapters support monitor mode, but support depends on the driver and chipset
-* For best compatibility, a USB Wi-Fi adapter with confirmed monitor mode support is recommended
+#### Debian / Ubuntu / Kali
 
-## Notes
-
-* Monitor mode availability depends on your wireless adapter and driver
-* If monitor mode is not supported, the tool will not be able to scan networks
-
-
-### Debian / Ubuntu / Kali
-
+```bash
 sudo apt update
 sudo apt install aircrack-ng iw ethtool
+```
 
-### Arch Linux
+#### Arch Linux
 
+```bash
 sudo pacman -S aircrack-ng iw ethtool
+```
+
+### Hardware
+
+* A wireless network adapter that supports **monitor mode**
+* Some internal laptop adapters support monitor mode (depends on driver and chipset)
+* For best compatibility, a USB Wi-Fi adapter with confirmed monitor mode support is recommended
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/B2krobbery/wifi-analyzer-cpp.git
+cd wifi-analyzer-cpp
+```
 
 ## Build
 
+```bash
 g++ main.cpp -o wifi-analyzer
+```
 
 ## Run
 
+```bash
 sudo ./wifi-analyzer
+```
 
 ## Usage
 
 1. Select a wireless interface
 2. Enable monitor mode
-3. Start scan
+3. Start scanning
 4. Disable monitor mode to restore normal Wi-Fi
 
 ## Notes
 
 * Root privileges are required to modify network interface modes
-* Monitor mode support depends on your wireless adapter and driver
+* Monitor mode availability depends on your wireless adapter and driver
 * NetworkManager may need to be stopped or restarted during operation
 
 ## Disclaimer
