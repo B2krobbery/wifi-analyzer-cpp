@@ -14,6 +14,18 @@ A simple C++ command-line tool for wireless network analysis using monitor mode 
 
 Install the following packages before running the tool:
 
+## Hardware Requirements
+
+* A wireless network adapter that supports **monitor mode**
+* Some laptop internal adapters support monitor mode, but support depends on the driver and chipset
+* For best compatibility, a USB Wi-Fi adapter with confirmed monitor mode support is recommended
+
+## Notes
+
+* Monitor mode availability depends on your wireless adapter and driver
+* If monitor mode is not supported, the tool will not be able to scan networks
+
+
 ### Debian / Ubuntu / Kali
 
 sudo apt update
